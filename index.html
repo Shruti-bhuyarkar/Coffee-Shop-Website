@@ -417,7 +417,7 @@
             <span id="emailError" style="color: red;"></span><br>
 
             <input class="form-control" type="text" placeholder="PinCode" aria-label="default input example"
-              id="pinCodeInput">
+              id="pinCodeInput" maxlength="6">
             <span id="pinCodeError" style="color: red;"></span><br>
 
             <button id="contact-btn" type="button" onclick="validateForm()">Submit</button>
@@ -432,7 +432,7 @@
 
                 // Regular expressions for validation
                 var nameRegex = /^[a-zA-Z]+$/;
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[a-z]{2}$/;
+                var emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
                 var pinCodeRegex = /^\d{6}$/;
 
                 // Validate Name
