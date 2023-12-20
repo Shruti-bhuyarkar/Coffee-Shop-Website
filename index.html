@@ -409,15 +409,15 @@
             </p>
 
             <input class="form-control" type="text" placeholder="Name" aria-label="default input example"
-              id="nameInput">
+              id="nameInput" required>
             <span id="nameError" style="color: red;"></span><br>
 
             <input class="form-control" type="email" placeholder="Email" aria-label="default input example"
-              id="emailInput">
+              id="emailInput" required>
             <span id="emailError" style="color: red;"></span><br>
 
             <input class="form-control" type="text" placeholder="PinCode" aria-label="default input example"
-              id="pinCodeInput" maxlength="6">
+              id="pinCodeInput" maxlength="6" required>
             <span id="pinCodeError" style="color: red;"></span><br>
 
             <button id="contact-btn" type="button" onclick="validateForm()">Submit</button>
@@ -437,7 +437,7 @@
 
                 // Validate Name
                 if (!nameRegex.test(name)) {
-                  document.getElementById('nameError').innerText = 'Invalid Name. Please enter only alphabets.';
+                  document.getElementById('nameError').innerText = 'Please enter only alphabets.';
                   return;
                 } else {
                   document.getElementById('nameError').innerText = '';
@@ -445,7 +445,7 @@
 
                 // Validate Email
                 if (!emailRegex.test(email)) {
-                  document.getElementById('emailError').innerText = 'Invalid Email. Please enter a valid email address.';
+                  document.getElementById('emailError').innerText = ' Please enter a valid email address.';
                   return;
                 } else {
                   document.getElementById('emailError').innerText = '';
@@ -453,7 +453,7 @@
 
                 // Validate PinCode
                 if (!pinCodeRegex.test(pinCode)) {
-                  document.getElementById('pinCodeError').innerText = 'Invalid PinCode. Please enter a valid 6-digit PinCode.';
+                  document.getElementById('pinCodeError').innerText = ' Please enter a valid 6-digit PinCode.';
                   return;
                 } else {
                   document.getElementById('pinCodeError').innerText = '';
